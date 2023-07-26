@@ -30,6 +30,13 @@ h2 {
   padding: 10px 0;
   font-size: 2rem;
 }
+h4 {
+  padding: 6px 0;
+}
+.anchor {
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 main {
   display: flex;
@@ -77,13 +84,12 @@ li {
   background-color: var(--light-blue);
   color: #000;
 }
-section {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 500px;
-  height: 100%;
-  padding: 50px;
+  flex: 1;
+  padding: 30px;
 }
 form {
   padding: 40px 0;
@@ -180,6 +186,55 @@ nav {
   top: 4px;
   left: 26px;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pick-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pick-left-side {
+  display: flex;
+  gap: 25px;
+}
+.pick-item:hover {
+  border: 1px solid var(--cool-gray);
+}
+.active {
+  background-color: var(--light-blue);
+  border: 1px solid vaR(--cool-gray);
+}
+.pick-item input {
+  width: 18px;
+}
+.summary-array {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+}
+.summary-plan {
+  display: flex;
+  justify-content: space-between;
+}
+hr {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid var(--cool-gray);
+}
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

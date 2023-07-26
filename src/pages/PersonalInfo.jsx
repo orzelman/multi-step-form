@@ -42,27 +42,29 @@ export default function PersonalInfo(props) {
   }
 
   return (
-    <div>
-      <h2>Personal Info</h2>
-      <p className="gray">Please provide your name, email and phone number</p>
-      <form>
-        <div className="form-item">
-          <label htmlFor="input-name">Name</label>
-          <br></br>
-          <input name="input-name" onChange={handleChangeName}></input>
-        </div>
-        <div className="form-item">
-          <label htmlFor="input-email">Email Address</label>
-          <br></br>
-          <input name="input-email" onChange={handleChangeEmail}></input>
-        </div>
-        <div className="form-item">
-          <label htmlFor="input-phone">Phone Number</label>
-          <span>This field is required</span>
-          <br></br>
-          <input name="input-phone" onChange={handleChangePhone}></input>
-        </div>
-      </form>
+    <div className="container">
+      <section>
+        <h2>Personal Info</h2>
+        <p className="gray">Please provide your name, email and phone number</p>
+        <form>
+          <div className="form-item">
+            <label htmlFor="input-name">Name</label>
+            <br></br>
+            <input name="input-name" onChange={handleChangeName}></input>
+          </div>
+          <div className="form-item">
+            <label htmlFor="input-email">Email Address</label>
+            <br></br>
+            <input name="input-email" onChange={handleChangeEmail}></input>
+          </div>
+          <div className="form-item">
+            <label htmlFor="input-phone">Phone Number</label>
+            <span>This field is required</span>
+            <br></br>
+            <input name="input-phone" onChange={handleChangePhone}></input>
+          </div>
+        </form>
+      </section>
       <nav>
         <div className="button-back"></div>
         <div className="button-next" onClick={handleClickNext}>

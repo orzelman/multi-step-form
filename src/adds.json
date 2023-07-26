@@ -1,0 +1,32 @@
+[
+    {
+        "id": "pick1",
+        "name": "Online service",
+        "cost": {
+            "monthly": 1,
+            "yearly": 10
+        },
+        "description": "Access to multiplayer games",
+        "selected": false
+    },
+    {
+        "id": "pick2",
+        "name": "Larger storage",
+        "cost": {
+            "monthly": 2,
+            "yearly": 20
+        },
+        "description": "Extra 1TB of save",
+        "selected": false
+    },
+    {
+        "id": "pick3",
+        "name": "Larger storage",
+        "cost": {
+            "monthly": 2,
+            "yearly": 20
+        },
+        "description": "Custom theme of your profile",
+        "selected": false
+    }
+]

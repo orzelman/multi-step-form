@@ -1,6 +1,7 @@
 export default function Steps({currentPage}) {
   console.log("current page = ", currentPage)
   return (
+    <aside>
     <ul>
       <li>
         <div className={`list-digit ${currentPage===1? "active" : ""}`}>
@@ -39,5 +40,6 @@ export default function Steps({currentPage}) {
         </div>
       </li>
     </ul>
+    </aside>
   );
 }
