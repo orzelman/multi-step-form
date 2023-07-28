@@ -21,7 +21,7 @@
     },
     {
         "id": "pick3",
-        "name": "Larger storage",
+        "name": "Customizable profile",
         "cost": {
             "monthly": 2,
             "yearly": 20

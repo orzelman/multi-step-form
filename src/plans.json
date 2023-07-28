@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Arcade",
+        "imgUrl": "../images/icon-arcade.svg",
+        "cost": {
+            "monthly": 9,
+            "yearly": 90
+        }
+    },
+    {
+        "name": "Advanced",
+        "cost": {
+            "monthly": 12,
+            "yearly": 120
+        }
+    },
+    {
+        "name": "Pro",
+        "cost": {
+            "monthly": 15,
+            "yearly": 150
+        }
+    }
+]

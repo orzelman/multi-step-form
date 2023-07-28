@@ -3,10 +3,18 @@ import Pick from "../components/Pick";
 
 export default function AddOns(props) {
   function handleClickNav(nrPage) {
-    props.setCurrentPage(nrPage);
+    if(nrPage === 4) {
+      for(let i=0; i<props.adds; i++) {
+        props.adds[i].selected? props.setCurrentPage(nrPage) : ''
+      }
+    }
+    // props.setCurrentPage(nrPage);
   }
   function handleChange(pickId) {
-    pickId.selected = !pickId.selected;
+    const newAdds = [...props.adds]
+    const pickToUpdate = newAdds.find(item => item===pickId);
+    pickToUpdate.selected = !pickToUpdate.selected;
+    props.setAdds(newAdds)
   }
   return (
     <div className="container">
@@ -19,6 +27,7 @@ export default function AddOns(props) {
               <Pick
                 key={index}
                 add={add}
+                setAdds={props.setAdds}
                 handleChange={handleChange}
                 monthly={props.monthly}
               />
@@ -27,7 +36,7 @@ export default function AddOns(props) {
         </form>
       </header>
       <nav>
-        <div onClick={() => handleClickNav(2)}>Go Back</div>
+        <div className="goBack" onClick={() => handleClickNav(2)}>Go Back</div>
         <div className="button-next" onClick={() => handleClickNav(4)}>
           Next Step
         </div>

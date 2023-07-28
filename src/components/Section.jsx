@@ -5,7 +5,6 @@ import AddOns from "../pages/AddOns";
 import Finishing from "../pages/Finishing";
 
 export default function Section(props) {
-  // const [adds, setAdds] = useState({});
 
   return (
     <>
@@ -14,6 +13,8 @@ export default function Section(props) {
           setCurrentPage={props.setCurrentPage}
           monthly={props.monthly}
           setMonthly={props.setMonthly}
+          personalInfo={props.personalInfo}
+          setPersonInfo={props.setPersonInfo}
         />
       ) : (
         ""
@@ -35,7 +36,7 @@ export default function Section(props) {
           monthly={props.monthly}
           setMonthly={props.setMonthly}
           adds={props.adds}
-          // setAdds={setAdds}
+          setAdds={props.setAdds}
         />
       ) : (
         ""

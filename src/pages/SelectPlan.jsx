@@ -1,4 +1,5 @@
 import React from "react";
+import plans from "../plans.json";
 import imgArcade from "../images/icon-arcade.svg";
 import imgAdvanced from "../images/icon-advanced.svg";
 import imgPro from "../images/icon-pro.svg";
@@ -14,6 +15,7 @@ export default function SelectPlan(props) {
   }
 
   function handleClickNav(nrPage) {
+    if (props.plan === "" && nrPage===3) return;
     props.setCurrentPage(nrPage);
   }
 
@@ -27,7 +29,9 @@ export default function SelectPlan(props) {
         <form>
           <div className="select-tile">
             <div
-              className={`tile ${props.plan === "arcade" ? "selected-tile" : ""}`}
+              className={`tile ${
+                props.plan === "arcade" ? "selected-tile" : ""
+              }`}
               onClick={() => handleSelectTile("arcade")}
             >
               <img src={imgArcade} alt="Arcade plan" />
@@ -35,7 +39,9 @@ export default function SelectPlan(props) {
               <p className="gray">{props.monthly ? "$9/mo" : "$90/ye"}</p>
             </div>
             <div
-              className={`tile ${props.plan === "advanced" ? "selected-tile" : ""}`}
+              className={`tile ${
+                props.plan === "advanced" ? "selected-tile" : ""
+              }`}
               onClick={() => handleSelectTile("advanced")}
             >
               <img src={imgAdvanced} alt="Advanced plan" />
@@ -66,7 +72,9 @@ export default function SelectPlan(props) {
       </header>
 
       <nav>
-        <div onClick={() => handleClickNav(1)}>Go Back</div>
+        <div className="go-back" onClick={() => handleClickNav(1)}>
+          Go Back
+        </div>
         <div className="button-next" onClick={() => handleClickNav(3)}>
           Next Step
         </div>

@@ -33,6 +33,9 @@ h2 {
 h4 {
   padding: 6px 0;
 }
+p {
+  padding: 3px 0;
+}
 .anchor {
   cursor: pointer;
   text-decoration: underline;
@@ -96,8 +99,23 @@ form {
 }
 .form-item {
   padding: 10px 0;
+  position: relative;
+}
+.form-item-description {
+  display: flex;
+  justify-content: space-between;
+  font-size: .9rem;
+}
+.required-field {
+  display: none;
+  font-weight: 700;
+  color: var(--strawberry-red);
+}
+.show {
+  display: inline-block;
 }
 input {
+  position: relative;
   width: 100%;
   margin-top: 5px;
   padding: 10px;
@@ -105,12 +123,16 @@ input {
   border-radius: 5px;
   cursor: pointer;
 }
+
 input:focus {
   border: 1px solid var(--purplish-blue);
   outline: none;
 }
-label {
-  font-size: .9rem;
+.red-border {
+  border-color: var(--strawberry-red);
+}
+.red-border:focus {
+  border-color: var(--strawberry-red);
 }
 nav {
   display: flex;
@@ -147,7 +169,7 @@ nav {
   border: 1px solid var(--cool-gray);
 }
 .selected-tile {
-  background-color: var(--light-blue);
+  background-color: var(--magnolia);
   border: 1px solid vaR(--cool-gray);
 }
 .tile img {
@@ -209,7 +231,7 @@ form {
   border: 1px solid var(--cool-gray);
 }
 .active {
-  background-color: var(--light-blue);
+  background-color: var(--magnolia);
   border: 1px solid vaR(--cool-gray);
 }
 .pick-item input {
@@ -220,7 +242,7 @@ form {
   flex-direction: column;
   width: 100%;
   padding: 15px;
-  background-color: var(--light-gray);
+  background-color: var(--magnolia);
   border-radius: 6px;
 }
 .summary-plan {
@@ -230,9 +252,11 @@ form {
 hr {
   width: 100%;
   margin: 10px auto;
-  border: 1px solid var(--cool-gray);
+  border: 1px solid var(--light-gray);
 }
-
+.go-back {
+  cursor: pointer;
+}
 
 
 code {

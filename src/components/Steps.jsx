@@ -1,5 +1,4 @@
 export default function Steps({currentPage}) {
-  console.log("current page = ", currentPage)
   return (
     <aside>
     <ul>
