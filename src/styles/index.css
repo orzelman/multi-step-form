@@ -257,6 +257,15 @@ hr {
 .go-back {
   cursor: pointer;
 }
+.center-div {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 code {

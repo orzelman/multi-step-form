@@ -14,12 +14,11 @@ export default function PersonalInfo(props) {
     },
   ]);
   useEffect(() => {
-    if(props.personalInfo.name!=='')  validation[0].empty=false;
-    if(props.personalInfo.email!=='')  validation[1].empty=false;
-    if(props.personalInfo.phone!=='')  validation[2].empty=false;
+    if (props.personalInfo.name !== "") validation[0].empty = false;
+    if (props.personalInfo.email !== "") validation[1].empty = false;
+    if (props.personalInfo.phone !== "") validation[2].empty = false;
   }, []);
 
-  
   const handleChangeInput = (event) => {
     props.setPersonInfo((prev) => {
       return {
@@ -64,7 +63,6 @@ export default function PersonalInfo(props) {
   return (
     <div className="container">
       <section>
-        <h3>{new Date().getMilliseconds()}</h3>
         <h2>Personal Info</h2>
         <p className="gray">Please provide your name, email and phone number</p>
         <form>

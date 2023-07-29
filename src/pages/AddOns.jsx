@@ -2,14 +2,11 @@ import React from "react";
 import Pick from "../components/Pick";
 
 export default function AddOns(props) {
+
   function handleClickNav(nrPage) {
-    if(nrPage === 4) {
-      for(let i=0; i<props.adds; i++) {
-        props.adds[i].selected? props.setCurrentPage(nrPage) : ''
-      }
-    }
-    // props.setCurrentPage(nrPage);
+      props.setCurrentPage(nrPage);
   }
+
   function handleChange(pickId) {
     const newAdds = [...props.adds]
     const pickToUpdate = newAdds.find(item => item===pickId);
@@ -36,7 +33,7 @@ export default function AddOns(props) {
         </form>
       </header>
       <nav>
-        <div className="goBack" onClick={() => handleClickNav(2)}>Go Back</div>
+        <div className="go-back" onClick={() => handleClickNav(2)}>Go Back</div>
         <div className="button-next" onClick={() => handleClickNav(4)}>
           Next Step
         </div>

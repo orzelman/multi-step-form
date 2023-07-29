@@ -3,9 +3,9 @@ import PersonalInfo from "../pages/PersonalInfo";
 import SelectPlan from "../pages/SelectPlan";
 import AddOns from "../pages/AddOns";
 import Finishing from "../pages/Finishing";
+import Thankyou from "../pages/Thankyou";
 
 export default function Section(props) {
-
   return (
     <>
       {props.currentPage === 1 ? (
@@ -43,6 +43,16 @@ export default function Section(props) {
       )}
       {props.currentPage === 4 ? (
         <Finishing
+          setCurrentPage={props.setCurrentPage}
+          plan={props.plan}
+          monthly={props.monthly}
+          adds={props.adds}
+        />
+      ) : (
+        ""
+      )}
+      {props.currentPage === 5 ? (
+        <Thankyou
           setCurrentPage={props.setCurrentPage}
           plan={props.plan}
           monthly={props.monthly}

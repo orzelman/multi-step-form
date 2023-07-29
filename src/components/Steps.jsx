@@ -30,7 +30,7 @@ export default function Steps({currentPage}) {
         </div>
       </li>
       <li>
-      <div className={`list-digit ${currentPage===4? "active" : ""}`}>
+      <div className={`list-digit ${(currentPage===4 || currentPage===5)? "active" : ""}`}>
           <span>4</span>
         </div>
         <div className="list-text">

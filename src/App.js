@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "./adds.json";
 import Steps from "./components/Steps";
 import Section from "./components/Section";
@@ -13,6 +13,17 @@ function App() {
     email: "",
     phone: "",
   });
+  const [mobileDesign, setMobileDesign] = useState(true)
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 576) {
+        setMobileDesign(prev => prev=false)
+      }
+      else {
+        setMobileDesign(prev => prev=true)
+      }
+    })
+  }, [])
 
   return (
     <div className="App">

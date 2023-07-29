@@ -13,19 +13,16 @@ export default function Finishing(props) {
     }
   };
   let total = planCost();
-  console.log("adds array: ",Array.isArray(props.adds))
 
 
   props.adds.forEach(add => {
     if (add.selected) {
       if (props.monthly) {
-        console.log("cost.monthly = ",add.cost.monthly)
         total += add.cost.monthly;
       } else {
         total += add.cost.yearly;
       }
     }
-    console.log("total = ", total);
   })
 
   function handleClickNav(nrPage) {
@@ -77,18 +74,18 @@ export default function Finishing(props) {
             );
           })}
         </div>
-        <div className="summary-plan">
-          <p className="gray" style={{ padding: "15px 0" }}>
+        <div className="summary-plan" style={{padding: "15px"}}>
+          <p className="gray">
             Total {props.monthly ? "(per month)" : "(per year)"}
           </p>
-          <h3>
+          <h3 style={{color: "var(--purplish-blue"}}>
             +${total}/{props.monthly ? "mo" : "ye"}
           </h3>
         </div>
       </header>
       <nav>
-        <div onClick={() => handleClickNav(3)}>Go Back</div>
-        <div className="button-next" onClick={() => handleClickNav(3)}>
+        <div className="go-back" onClick={() => handleClickNav(3)}>Go Back</div>
+        <div className="button-next" onClick={() => handleClickNav(5)}>
           Confirm
         </div>
       </nav>
