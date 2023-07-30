@@ -29,5 +29,4 @@ Users should be able to:
 ![](./screenshot.jpg)
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Live Site URL: http://www.srv48678.seohost.com.pl/multi-step-form/
