@@ -26,7 +26,7 @@ Users should be able to:
   - A step is submitted, but no selection has been made
 
 ### Screenshot
-
+![](./screenshot.jpg)
 ### Links
 
 - Solution URL: 
