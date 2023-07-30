@@ -137,10 +137,21 @@ export default function PersonalInfo(props) {
       </section>
       <nav>
         <div className="button-back"></div>
-        <div className="button-next" disabled={true} onClick={handleClickNext}>
+        <div className="button-next" onClick={handleClickNext}>
           Next Step
         </div>
       </nav>
+      <div className="nav-mobile">
+        <div className="nav-mobile-flex">
+          <div className="button-back"></div>
+          <div
+            className="button-next"
+            onClick={handleClickNext}
+          >
+            Next Step
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

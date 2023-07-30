@@ -38,6 +38,20 @@ export default function AddOns(props) {
           Next Step
         </div>
       </nav>
+      <div className="nav-mobile">
+        <div className="nav-mobile-flex">
+          <div className="button-back" onClick={() => handleClickNav(2)}>
+            <p className="gray">Go back</p>
+          </div>
+          <div
+            className="button-next"
+            disabled={true}
+            onClick={() => handleClickNav(4)}
+          >
+            Next Step
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

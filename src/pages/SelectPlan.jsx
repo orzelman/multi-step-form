@@ -15,7 +15,7 @@ export default function SelectPlan(props) {
   }
 
   function handleClickNav(nrPage) {
-    if (props.plan === "" && nrPage===3) return;
+    if (props.plan === "" && nrPage === 3) return;
     props.setCurrentPage(nrPage);
   }
 
@@ -79,6 +79,16 @@ export default function SelectPlan(props) {
           Next Step
         </div>
       </nav>
+      <div className="nav-mobile">
+        <div className="nav-mobile-flex">
+          <div className="button-back" onClick={() => handleClickNav(1)}>
+            <p className="gray">Go Back</p>
+          </div>
+          <div className="button-next" onClick={() => handleClickNav(3)}>
+            Next Step
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

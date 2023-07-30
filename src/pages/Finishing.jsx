@@ -89,6 +89,16 @@ export default function Finishing(props) {
           Confirm
         </div>
       </nav>
+      <div className="nav-mobile">
+        <div className="nav-mobile-flex">
+          <div className="button-back" onClick={() => handleClickNav(3)}>
+            <p className="gray">Go Back</p>
+          </div>
+          <div className="button-next" onClick={() => handleClickNav(5)}>
+            Confirm
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
